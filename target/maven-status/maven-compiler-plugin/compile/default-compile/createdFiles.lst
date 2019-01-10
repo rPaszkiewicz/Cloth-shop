@@ -2,6 +2,7 @@ entity\User.class
 entity\Main.class
 entity\Product.class
 entity\Cloth.class
+api\UserService.class
 entity\Boots.class
 entity\Boots$1.class
 entity\Cloth$1.class

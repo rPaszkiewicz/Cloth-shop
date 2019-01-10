@@ -1,0 +1,10 @@
+entity\User.class
+entity\Main.class
+entity\Product.class
+entity\Cloth.class
+entity\Boots.class
+entity\Boots$1.class
+entity\Cloth$1.class
+entity\Product$Builder.class
+entity\Boots$Builder.class
+entity\Cloth$Builder.class

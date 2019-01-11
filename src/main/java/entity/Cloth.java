@@ -1,10 +1,10 @@
 package entity;
 
 public class Cloth extends Product{
-    private String size;
+    private Enum size;
     private String material;
 
-    private Cloth(Long id, String productName, double price, double weight, String color, int productCount,String size, String material){
+    private Cloth(Long id, String productName, double price, double weight, String color, int productCount,Enum size, String material){
         super(id, productName, price, weight, color, productCount);
         this.material = material;
         this.size = size;
@@ -17,7 +17,7 @@ public class Cloth extends Product{
         private double weight;
         private String color;
         private int productCount;
-        private String size;
+        private Enum size;
         private String material;
 
         public Builder(){
@@ -53,7 +53,7 @@ public class Cloth extends Product{
             return this;
         }
 
-        public Builder setSize(String size){
+        public Builder setSize(Enum size){
             this.size = size;
             return this;
         }
@@ -64,11 +64,11 @@ public class Cloth extends Product{
         }
 
         public Cloth build(){
-            return new Cloth(id,productName,price,weight,color,productCount,size,material);
+            return new Cloth(id,productName,price,weight,color,productCount, size,material);
         }
     }
 
-    public String getSize(){
+    public Enum getSize(){
         return  size;
     }
 

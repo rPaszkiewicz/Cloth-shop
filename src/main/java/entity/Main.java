@@ -1,5 +1,7 @@
 package entity;
 
+import clothSize.size;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -31,7 +33,7 @@ public class Main {
                 .setWeight(250)
                 .setColor("Indigo")
                 .setProductCount(10)
-                .setSize("L")
+                .setSize(size.L)
                 .setMaterial("Cotton")
                 .build();
 

@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Product product = new Product.Builder()
-                .setId(123456789)
+                .setId(123456789L)
                 .setProductName("T-shirt")
                 .setPrice(49.99)
                 .setWeight(120)

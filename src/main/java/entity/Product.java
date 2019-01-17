@@ -8,7 +8,7 @@ public class Product {
     private String color;
     private int productCount;
 
-    public Product(long id, String productName, double price, double weight, String color, int productCount){
+    public Product(Long id, String productName, double price, double weight, String color, int productCount){
         this.id = id;
         this.productName = productName;
         this.price = price;
@@ -28,7 +28,7 @@ public class Product {
         public Builder(){
         }
 
-        public Builder setId(long id) {
+        public Builder setId(Long id) {
             this.id = id;
             return this;
         }

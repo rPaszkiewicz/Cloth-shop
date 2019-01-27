@@ -8,7 +8,7 @@ public class Product {
     private String color;
     private int productCount;
 
-    public Product(Long id, String productName, double price, double weight, String color, int productCount){
+    protected Product(Long id, String productName, double price, double weight, String color, int productCount){
         this.id = id;
         this.productName = productName;
         this.price = price;

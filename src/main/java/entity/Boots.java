@@ -4,7 +4,7 @@ public class Boots extends Product {
     private int size;
     private boolean isNaturalLeather;
 
-    private Boots(long id, String productName, double price, double weight, String color, int productCount,int size, boolean isNaturalLeather){
+    public Boots(long id, String productName, double price, double weight, String color, int productCount,int size, boolean isNaturalLeather){
         super(id,productName,price,weight,color,productCount);
         this.size = size;
         this.isNaturalLeather = isNaturalLeather;
@@ -80,14 +80,6 @@ public class Boots extends Product {
 
     @Override
     public String toString(){
-        return "Boots: " + "\n" +
-                "  id: " + getId() + "\n" +
-                "  product name: " + getProductName() + "\n" +
-                "  price: " + getPrice() + "\n" +
-                "  weight: " + getWeight() + "\n" +
-                "  color: " + getColor() + "\n" +
-                "  quantity: " + getProductCount() + "\n" +
-                "  size: " + getSize() + "\n" +
-                "  is leather: " + getIsNaturalLeather();
+        return super.toString() + PRODUCT_SEPARATOR + size + PRODUCT_SEPARATOR + isNaturalLeather;
     }
 }

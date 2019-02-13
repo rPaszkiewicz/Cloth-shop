@@ -1,6 +1,9 @@
 package entity;
 
 public class Product {
+
+    public final static String PRODUCT_SEPARATOR = "#";
+
     private long id;
     private String productName;
     private double price;
@@ -8,7 +11,7 @@ public class Product {
     private String color;
     private int productCount;
 
-    protected Product(Long id, String productName, double price, double weight, String color, int productCount){
+    public Product(Long id, String productName, double price, double weight, String color, int productCount){
         this.id = id;
         this.productName = productName;
         this.price = price;
@@ -18,7 +21,7 @@ public class Product {
     }
 
     public static class Builder {
-        private long id;
+        private Long id;
         private String productName;
         private double price;
         private double weight;
@@ -98,13 +101,7 @@ public class Product {
 
     @Override
     public String toString(){
-        return  "Product: " + "\n" +
-                "  id: " + id + "\n"+
-                "  name: " + productName + "\n"+
-                "  price: " + price + "\n"+
-                "  weight: " + weight + "\n"+
-                "  color: " + color + "\n"+
-                "  quantity: " + productCount;
+        return  id + PRODUCT_SEPARATOR + productName + PRODUCT_SEPARATOR + price + PRODUCT_SEPARATOR + weight + PRODUCT_SEPARATOR + color + PRODUCT_SEPARATOR + productCount;
 
     }
 }

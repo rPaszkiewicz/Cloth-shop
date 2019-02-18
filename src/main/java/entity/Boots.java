@@ -4,7 +4,7 @@ public class Boots extends Product {
     private int size;
     private boolean isNaturalLeather;
 
-    public Boots(long id, String productName, double price, double weight, String color, int productCount,int size, boolean isNaturalLeather){
+    public Boots(Long id, String productName, double price, double weight, String color, int productCount,int size, boolean isNaturalLeather){
         super(id,productName,price,weight,color,productCount);
         this.size = size;
         this.isNaturalLeather = isNaturalLeather;

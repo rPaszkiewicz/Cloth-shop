@@ -4,7 +4,7 @@ public class Product {
 
     public final static String PRODUCT_SEPARATOR = "#";
 
-    private long id;
+    private Long id;
     private String productName;
     private double price;
     private double weight;
@@ -61,7 +61,7 @@ public class Product {
             return this;
         }
 
-        public Product Build(){
+        public Product build(){
             return new Product(id,productName,price,weight,color,productCount);
         }
 

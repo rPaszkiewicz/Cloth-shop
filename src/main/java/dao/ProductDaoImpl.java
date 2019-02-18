@@ -5,7 +5,6 @@ import entity.Product;
 import entity.parser.ProductParser;
 import utils.FileUtils;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +16,10 @@ public class ProductDaoImpl implements ProductDao {
     private final String productType;
 
 
-    public ProductDaoImpl(String fileName, String productType){
+    public ProductDaoImpl(String fileName, String productType) throws IOException{
         this.fileName = fileName;
         this.productType = productType;
+        FileUtils.createNewFile(fileName);
     }
 
     public void saveProduct(Product product) throws IOException{
@@ -31,8 +31,9 @@ public class ProductDaoImpl implements ProductDao {
     public void saveProducts(List<Product> products)throws IOException{
         FileUtils.clearFile(fileName);
         PrintWriter printWriter = new PrintWriter(new FileOutputStream(fileName,true));
-        for (Product product : products)
+        for (Product product : products) {
             printWriter.println(product);
+        }
         printWriter.close();
     }
 
@@ -57,7 +58,7 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     public List<Product> getAllProducts() throws IOException{
-        List<Product> products = new ArrayList<>();
+        List<Product> products = new ArrayList<Product>();
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
 
         String lineReader = reader.readLine();
@@ -81,7 +82,6 @@ public class ProductDaoImpl implements ProductDao {
                 return product;
             }
         }
-
         return null;
     }
 
